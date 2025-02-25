@@ -47,10 +47,6 @@ def chunk_text(text, max_words=500):
     return [' '.join(words[i:i + max_words]) for i in range(0, len(words), max_words)]
 
 def summarize_text(text):
-    """
-    Summarizes the transcribed text. If the text is too long,
-    splits it into chunks, summarizes each, and then summarizes the combined summaries.
-    """
     if not text.strip():
         return "Transcription returned empty text. Unable to summarize."
 
